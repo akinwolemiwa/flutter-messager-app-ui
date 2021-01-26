@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:messenger/screens/chatDetailPage.dart';
 
 
 // ignore: must_be_immutable
@@ -19,6 +20,9 @@ class _ConversationListState extends State<ConversationList> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){  
+        Navigator.push(context, MaterialPageRoute(builder: (context){
+          return ChatDetailPage();
+        }));
       },
       child: Container(
         padding: EdgeInsets.only(left: 16,right: 16, top: 10, bottom: 10),
@@ -43,13 +47,14 @@ class _ConversationListState extends State<ConversationList> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Text(widget.name,
-                          style: TextStyle(fontSize: 16),
+                          style: TextStyle(fontSize: 16,
+                          fontWeight: widget.isMessageRead? FontWeight.bold: FontWeight.normal),
                           ),
                           SizedBox(height: 6,
                           ),
                           Text(widget.messageText,
                           style: TextStyle(fontSize: 13,
-                          color: Colors.grey[600],
+                          color: widget.isMessageRead? Colors.black: Colors.grey[700],
                           fontWeight: widget.isMessageRead? FontWeight.bold: FontWeight.normal),
                           ),
                         ],

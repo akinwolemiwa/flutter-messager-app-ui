@@ -12,14 +12,14 @@ class ChatPage extends StatefulWidget {
 
 class _ChatPageState extends State<ChatPage> {
   List<ChatUsers> chatUsers = [
-    ChatUsers(name: 'Kingpin', messageText: 'I have a job for you', imageURL: 'images/Frame 6.png', time: 'now'),
-    ChatUsers(name: 'General R', messageText: 'It always you', imageURL: 'images/Frame 8.png', time: 'now'),
-    ChatUsers(name: 'Oshodi', messageText: 'I get your az, wey you de?', imageURL: 'images/Frame 11.png', time: 'now'),
-    ChatUsers(name: 'Big Dogg', messageText: 'Chairman, wey my bone dey?', imageURL: 'images/Frame 5.png', time: 'yesterday'),
-    ChatUsers(name: 'Mr Donga', messageText: 'I cannot can', imageURL: 'images/Frame 9.png', time: 'yesterday'),
-    ChatUsers(name: 'Mr Swagg', messageText: 'Hey dearie', imageURL: 'images/Frame 12.png', time: '07 Jan'),
-    ChatUsers(name: 'Pastor Matthew', messageText: 'Let us pray', imageURL: 'images/Frame 7.png', time: '27 Oct 2020'),
-    ChatUsers(name: 'Boss Man', messageText: 'Do you have a hoil?', imageURL: 'images/Frame 10.png', time: '17 Jun 2020'),
+    ChatUsers(name: 'Kingpin', messageText: 'I have a job for you', imageURL: 'images/Frame 6.png', time: '5:21pm'),
+    ChatUsers(name: 'Osita', messageText: 'What is this life?', imageURL: 'images/Frame 8.jpg', time: '1:00pm'),
+    ChatUsers(name: 'Oshodi', messageText: 'I get your az, wey you de?', imageURL: 'images/Frame 11.png', time: '10:18am'),
+    ChatUsers(name: 'Big Dogg', messageText: 'Chairman, wey my bone dey?', imageURL: 'images/Frame 5.png', time: 'Wednesday'),
+    ChatUsers(name: 'Mr Donga', messageText: 'I cannot can', imageURL: 'images/Frame 9.png', time: 'Monday'),
+    ChatUsers(name: 'Mr Swagg', messageText: 'Hey dearie', imageURL: 'images/Frame 12.png', time: '07/01/2021'),
+    ChatUsers(name: 'Levi', messageText: 'Kill them all', imageURL: 'images/Frame 71.jpg', time: '27/10/2020'),
+    ChatUsers(name: 'Boss Man', messageText: 'Do you have a hoil?', imageURL: 'images/Frame 10.png', time: '17/07/2020'),
   ];
 
   @override
@@ -99,7 +99,7 @@ class _ChatPageState extends State<ChatPage> {
                   messageText: chatUsers[index].messageText,
                   imageURL: chatUsers[index].imageURL,
                   time: chatUsers[index].time,
-                  isMessageRead: (index == 0 || index == 3)?true:false,
+                  isMessageRead: (index == 1 || index == 5 || index == 4 || index == 6 )?true:false,
                 );
               },
             ),

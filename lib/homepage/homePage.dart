@@ -8,7 +8,6 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ChatPage(),
-
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.orange[900],
         unselectedItemColor: Colors.grey[600],
